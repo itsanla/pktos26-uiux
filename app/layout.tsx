@@ -2,8 +2,8 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "PKTOS 2026 ui/ux",
-  description: "aplikasi ui/ux pktos",
+  title: "PKATOS 2026 — Kompetisi UI/UX Nasional",
+  description: "Kompetisi desain UI/UX terbesar untuk pelajar Indonesia. Wujudkan desain terbaikmu dan raih hadiah puluhan juta rupiah.",
 };
 
 export default function RootLayout({
@@ -12,10 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html
-      lang="en"
-      className={`h-full antialiased`}
-    >
+    <html lang="id" className="h-full antialiased">
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
   );
