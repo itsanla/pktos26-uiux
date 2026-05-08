@@ -1,10 +1,26 @@
+import Navbar from "@/components/navbar";
+
 export default function Blog2() {
   return (
-    <main className="p-8 max-w-2xl mx-auto">
-      <a href="/blog" className="text-sm text-gray-500 hover:underline">← Kembali</a>
-      <h1 className="text-2xl font-bold mt-4 mb-2">Blog Post 2</h1>
-      <p className="text-sm text-gray-500 mb-4">15 Februari 2026</p>
-      <p>Ini adalah konten dari blog post kedua. Isi dengan artikel sebenarnya nanti.</p>
+    <main className="min-h-screen bg-stone-50 pb-20">
+      <Navbar />
+      <article className="p-8 max-w-3xl mx-auto bg-white mt-10 rounded-2xl shadow-sm border border-stone-200">
+        <a href="/blog" className="text-sm text-amber-700 hover:text-orange-600 font-semibold uppercase tracking-widest transition-colors">
+          ← Kembali
+        </a>
+        <h1 className="text-3xl md:text-4xl font-serif font-bold mt-6 mb-4 text-stone-900 leading-tight">
+          Makna Tradisi Pujawali
+        </h1>
+        <div className="flex flex-wrap items-center gap-3 text-sm text-stone-500 mb-8 border-b border-stone-100 pb-6">
+          <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full font-medium">Tradisi</span>
+          <p>15 Februari 2026</p>
+          <span>•</span>
+          <p>Ditulis oleh Rahmat</p>
+        </div>
+        <p className="first-letter:text-6xl first-letter:font-serif first-letter:font-bold first-letter:text-amber-900 first-letter:mr-3 first-letter:float-left text-stone-800 leading-loose text-lg">
+          Setiap 210 hari sekali, Pura Tanah Lot menyelenggarakan upacara Pujawali. Perayaan ini merupakan bentuk rasa syukur masyarakat Hindu Bali. Melalui media digital interaktif, kita dapat mengedukasi wisatawan tentang tata krama saat odalan berlangsung sehingga menjaga kesakralan prosesi ibadah umat Hindu.
+        </p>
+      </article>
     </main>
   );
 }
