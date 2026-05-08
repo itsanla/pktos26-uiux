@@ -1,13 +1,49 @@
-export default function Event2() {
+export default function Event4() {
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_top,_rgba(139,69,19,0.28),transparent_25%),linear-gradient(180deg,#7c4a1f_0%,#b36d2e_35%,#3b190a_100%)] px-4 py-10 text-amber-100">
-      <div className="mx-auto max-w-3xl overflow-hidden rounded-[2rem] border border-amber-100/15 bg-[#2b1208]/75 p-8 shadow-[0_35px_90px_-40px_rgba(0,0,0,0.6)] backdrop-blur-xl">
-        <a href="/event" className="text-sm font-semibold text-amber-100/90 transition hover:text-white">← Kembali</a>
-        <h1 className="mt-6 text-4xl font-extrabold">Event 2</h1>
-        <p className="mt-3 text-sm uppercase tracking-[0.24em] text-orange-100/80">5 April 2026 · Bandung</p>
-        <p className="mt-8 text-base leading-8 text-orange-100/85">
-          Deskripsi lengkap event kedua. Isi dengan informasi sebenarnya nanti, dan rasakan sensasi sunset ala Bali di setiap detail tampilan.
-        </p>
+    <main>
+      <div className="event-detail-banner">
+        <div className="container">
+          <a href="/event" className="article-back">← Kembali ke Event</a>
+          <p className="event-loc" style={{ marginBottom: 16 }}>Tanah Lot, Tabanan, Bali</p>
+          <div className="event-detail-date">18 Apr</div>
+          <h1 className="article-title" style={{ marginTop: 24 }}>Workshop Fotografi Sunset</h1>
+        </div>
+      </div>
+      <div className="event-detail-body">
+        <div className="container">
+          <div className="event-detail-grid">
+            <div>
+              <p className="event-detail-desc">
+                Workshop Fotografi Sunset mengajak peserta memotret lanskap sunset Tanah Lot yang
+                legendaris. Dipandu oleh fotografer profesional berpengalaman, peserta akan mempelajari
+                teknik komposisi, pengaturan exposure, dan storytelling visual saat cahaya senja.
+              </p>
+              <p className="event-detail-desc" style={{ marginTop: 24 }}>
+                Workshop mencakup sesi teori singkat, praktik lapangan selama golden hour, dan review
+                hasil karya bersama. Peserta akan mendapatkan akses ke spot fotografi terbaik yang
+                tidak tersedia untuk umum, termasuk sudut pandang eksklusif dari atas tebing barat.
+              </p>
+            </div>
+            <div className="event-detail-sidebar">
+              <div className="event-detail-fact">
+                <p className="event-detail-fact-lbl">Tanggal</p>
+                <p className="event-detail-fact-val">18 April 2026</p>
+              </div>
+              <div className="event-detail-fact">
+                <p className="event-detail-fact-lbl">Durasi</p>
+                <p className="event-detail-fact-val">2.5 jam</p>
+              </div>
+              <div className="event-detail-fact">
+                <p className="event-detail-fact-lbl">Highlight</p>
+                <p className="event-detail-fact-val">Menangkap momen golden hour terbaik</p>
+              </div>
+              <div className="event-detail-fact">
+                <p className="event-detail-fact-lbl">Lokasi</p>
+                <p className="event-detail-fact-val">Tanah Lot, Tabanan, Bali</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </main>
   );

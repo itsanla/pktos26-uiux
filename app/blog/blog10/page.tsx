@@ -1,26 +1,35 @@
-import Navbar from "@/components/navbar";
+import Image from "next/image";
 
 export default function Blog10() {
   return (
-    <main className="min-h-screen bg-stone-50 pb-20">
-      <Navbar />
-      <article className="p-8 max-w-3xl mx-auto bg-white mt-10 rounded-2xl shadow-sm border border-stone-200">
-        <a href="/blog" className="text-sm text-amber-700 hover:text-orange-600 font-semibold uppercase tracking-widest transition-colors">
-          ← Kembali
-        </a>
-        <h1 className="text-3xl md:text-4xl font-serif font-bold mt-6 mb-4 text-stone-900 leading-tight">
-          Konservasi Karang dan Lingkungan
-        </h1>
-        <div className="flex flex-wrap items-center gap-3 text-sm text-stone-500 mb-8 border-b border-stone-100 pb-6">
-          <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full font-medium">Lingkungan</span>
-          <p>10 Juni 2026</p>
-          <span>•</span>
-          <p>Ditulis oleh Rahmat</p>
+    <main>
+      <div className="article-banner">
+        <div className="container">
+          <a href="/blog" className="article-back">← Kembali ke Journal</a>
+          <div className="article-eyebrow">
+            <span className="article-cat">Lingkungan</span>
+            <span>10 Juni 2026</span>
+            <span>·</span>
+            <span>Rahmat</span>
+          </div>
+          <h1 className="article-title">Konservasi Karang dan Lingkungan</h1>
         </div>
-        <p className="first-letter:text-6xl first-letter:font-serif first-letter:font-bold first-letter:text-amber-900 first-letter:mr-3 first-letter:float-left text-stone-800 leading-loose text-lg">
-          Pemerintah dan warga lokal terus melakukan upaya konservasi menggunakan pemecah gelombang buatan untuk mencegah abrasi karang. Platform media digital berperan sangat penting sebagai alat kampanye kesadaran lingkungan, untuk selalu mengingatkan wisatawan agar senantiasa menjaga ekosistem pesisir.
+        <div className="article-hero">
+          <Image src="/blog/placeholder.webp" alt="Konservasi Karang" fill style={{ objectFit: "cover" }} sizes="100vw" />
+        </div>
+      </div>
+      <div className="article-body">
+        <p>
+          Abrasi laut menjadi ancaman nyata bagi kelestarian Tanah Lot. Setiap tahun, diperkirakan
+          beberapa sentimeter batu karang terkikis oleh kekuatan ombak dan aktivitas manusia. Program
+          konservasi terpadu melibatkan ilmuwan, pemuka adat, dan komunitas lokal untuk mencari solusi jangka panjang.
         </p>
-      </article>
+        <p>
+          Salah satu inovasi yang menjanjikan adalah penanaman terumbu karang buatan di sekitar kaki
+          batu karang utama. Selain memperkuat struktur alami, terumbu karang ini juga menjadi habitat
+          bagi biota laut dan menambah kekayaan ekosistem pesisir di kawasan warisan budaya Tanah Lot.
+        </p>
+      </div>
     </main>
   );
 }

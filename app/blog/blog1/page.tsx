@@ -1,26 +1,36 @@
-import Navbar from "@/components/navbar";
+import Image from "next/image";
 
 export default function Blog1() {
   return (
-    <main className="min-h-screen bg-stone-50 pb-20">
-      <Navbar />
-      <article className="p-8 max-w-3xl mx-auto bg-white mt-10 rounded-2xl shadow-sm border border-stone-200">
-        <a href="/blog" className="text-sm text-amber-700 hover:text-orange-600 font-semibold uppercase tracking-widest transition-colors">
-          ← Kembali
-        </a>
-        <h1 className="text-3xl md:text-4xl font-serif font-bold mt-6 mb-4 text-stone-900 leading-tight">
-          Menjaga Harmoni di Pura Tanah Lot
-        </h1>
-        <div className="flex flex-wrap items-center gap-3 text-sm text-stone-500 mb-8 border-b border-stone-100 pb-6">
-          <span className="bg-amber-100 text-amber-800 px-3 py-1 rounded-full font-medium">Budaya</span>
-          <p>10 Januari 2026</p>
-          <span>•</span>
-          <p>Ditulis oleh Rahmat</p>
+    <main>
+      <div className="article-banner">
+        <div className="container">
+          <a href="/blog" className="article-back">← Kembali ke Journal</a>
+          <div className="article-eyebrow">
+            <span className="article-cat">Budaya</span>
+            <span>10 Januari 2026</span>
+            <span>·</span>
+            <span>Rahmat</span>
+          </div>
+          <h1 className="article-title">Menjaga Harmoni di Pura Tanah Lot</h1>
         </div>
-        <p className="first-letter:text-6xl first-letter:font-serif first-letter:font-bold first-letter:text-amber-900 first-letter:mr-3 first-letter:float-left text-stone-800 leading-loose text-lg">
-          Pura Tanah Lot bukan sekadar destinasi wisata, melainkan simbol keseimbangan antara manusia, alam, dan Tuhan (Tri Hita Karana). Dalam era digital ini, upaya pelestarian tidak hanya berfokus pada fisik bangunan pura yang terkikis ombak, tetapi juga menjaga kesucian dan nilai budayanya agar dapat diwariskan ke generasi mendatang.
+        <div className="article-hero">
+          <Image src="/blog/placeholder.webp" alt="Menjaga Harmoni" fill style={{ objectFit: "cover" }} sizes="100vw" />
+        </div>
+      </div>
+      <div className="article-body">
+        <p>
+          Pura Tanah Lot bukan sekadar destinasi wisata, melainkan simbol keseimbangan antara manusia,
+          alam, dan Tuhan — Tri Hita Karana. Dalam era digital ini, upaya pelestarian tidak hanya berfokus
+          pada fisik bangunan pura yang terkikis ombak, tetapi juga menjaga kesucian dan nilai budayanya
+          agar dapat diwariskan ke generasi mendatang.
         </p>
-      </article>
+        <p>
+          Setiap tahun ribuan wisatawan dari seluruh penjuru dunia datang untuk menyaksikan keindahan
+          pura yang berdiri kokoh di atas batu karang. Tantangan terbesar adalah menyeimbangkan kepentingan
+          pariwisata dengan kesakralan tempat ibadah yang masih aktif digunakan hingga hari ini.
+        </p>
+      </div>
     </main>
   );
 }
