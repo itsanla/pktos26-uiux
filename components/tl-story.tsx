@@ -12,6 +12,7 @@ export default function TLStory() {
               {/* kanan atas — geser ke bawah, overlap judul */}
               <video
                 autoPlay muted loop playsInline
+                className="story-vid-tr"
                 style={{
                   position: "absolute", top: 0, right: 0,
                   width: 200, borderRadius: 2, display: "block",
@@ -25,19 +26,6 @@ export default function TLStory() {
               <h2 className="about-title" style={{ position: "relative", zIndex: 1 }}>
                 A temple<br />balanced on the <em>tide.</em>
               </h2>
-
-              {/* kiri bawah — geser ke atas, overlap judul */}
-              <video
-                autoPlay muted loop playsInline
-                style={{
-                  position: "absolute", bottom: -30, left: 0,
-                  width: 200, borderRadius: 2, display: "block",
-                  zIndex: 2,
-                }}
-              >
-                <source src="/assets.mp4" type="video/mp4" />
-              </video>
-
             </div>
           </div>
 
