@@ -1,4 +1,3 @@
-import Navbar from "@/components/navbar";
 const events = [
   {
     slug: "event1",
@@ -49,8 +48,6 @@ const events = [
 export default function EventPage() {
   return (
     <main className="min-h-screen overflow-hidden bg-[radial-gradient(circle_at_top,_rgba(139,69,19,0.28),transparent_25%),linear-gradient(180deg,#7c4a1f_0%,#c57b3b_35%,#2d1406_100%)] text-amber-100">
-      <Navbar />
-
       <section className="relative px-4 py-10 md:px-8 lg:px-16">
         <div className="relative overflow-hidden rounded-[2rem] border border-amber-100/10 bg-[#2a1207]/70 p-8 backdrop-blur-xl shadow-[0_35px_90px_-40px_rgba(0,0,0,0.65)] sm:p-12">
           <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_right,rgba(255,209,178,0.18),transparent_30%)]" />

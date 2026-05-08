@@ -1,5 +1,3 @@
-import Navbar from "@/components/navbar";
-
 export default function BlogPage() {
   const posts = [
     { slug: "blog1", category: "Budaya", title: "Menjaga Harmoni di Pura Tanah Lot", date: "10 Jan 2026", excerpt: "Eksplorasi nilai spiritual dan pelestarian lingkungan di pura laut ikonik." },
@@ -16,8 +14,6 @@ export default function BlogPage() {
 
   return (
     <main className="min-h-screen bg-stone-50 pb-16">
-      <Navbar />
-      
       {/* Header Banner */}
       <section className="bg-amber-900 text-amber-50 py-16 px-8 text-center border-b-8 border-orange-600">
         <h1 className="text-4xl md:text-5xl font-serif font-bold mb-4 tracking-wide">Warta Budaya Tanah Lot</h1>
