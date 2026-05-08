@@ -15,7 +15,7 @@ export default function Blog10() {
           <h1 className="article-title">Konservasi Karang dan Lingkungan</h1>
         </div>
         <div className="article-hero">
-          <Image src="/blog/placeholder.webp" alt="Konservasi Karang" fill style={{ objectFit: "cover" }} sizes="100vw" />
+          <Image src="/blog/blog10.webp" alt="Konservasi Karang" fill style={{ objectFit: "cover" }} sizes="100vw" />
         </div>
       </div>
       <div className="article-body">

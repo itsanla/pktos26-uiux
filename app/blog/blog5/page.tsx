@@ -15,7 +15,7 @@ export default function Blog5() {
           <h1 className="article-title">Eksotisme Senja dan Fotografi</h1>
         </div>
         <div className="article-hero">
-          <Image src="/blog/placeholder.webp" alt="Senja Tanah Lot" fill style={{ objectFit: "cover" }} sizes="100vw" />
+          <Image src="/blog/blog5.webp" alt="Senja Tanah Lot" fill style={{ objectFit: "cover" }} sizes="100vw" />
         </div>
       </div>
       <div className="article-body">

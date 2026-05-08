@@ -15,7 +15,7 @@ export default function Blog1() {
           <h1 className="article-title">Menjaga Harmoni di Pura Tanah Lot</h1>
         </div>
         <div className="article-hero">
-          <Image src="/blog/placeholder.webp" alt="Menjaga Harmoni" fill style={{ objectFit: "cover" }} sizes="100vw" />
+          <Image src="/blog/blog1.webp" alt="Menjaga Harmoni" fill style={{ objectFit: "cover" }} sizes="100vw" />
         </div>
       </div>
       <div className="article-body">

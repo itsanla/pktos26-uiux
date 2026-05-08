@@ -15,7 +15,7 @@ export default function Blog4() {
           <h1 className="article-title">Ular Suci Penjaga Pura</h1>
         </div>
         <div className="article-hero">
-          <Image src="/blog/placeholder.webp" alt="Ular Suci" fill style={{ objectFit: "cover" }} sizes="100vw" />
+          <Image src="/blog/blog4.webp" alt="Ular Suci" fill style={{ objectFit: "cover" }} sizes="100vw" />
         </div>
       </div>
       <div className="article-body">

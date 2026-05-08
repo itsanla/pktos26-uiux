@@ -15,7 +15,7 @@ export default function Blog7() {
           <h1 className="article-title">Misteri Gua Air Suci</h1>
         </div>
         <div className="article-hero">
-          <Image src="/blog/placeholder.webp" alt="Gua Air Suci" fill style={{ objectFit: "cover" }} sizes="100vw" />
+          <Image src="/blog/blog7.webp" alt="Gua Air Suci" fill style={{ objectFit: "cover" }} sizes="100vw" />
         </div>
       </div>
       <div className="article-body">

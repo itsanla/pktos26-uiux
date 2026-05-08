@@ -15,7 +15,7 @@ export default function Blog8() {
           <h1 className="article-title">Tari Kecak di Tepi Samudra</h1>
         </div>
         <div className="article-hero">
-          <Image src="/blog/placeholder.webp" alt="Tari Kecak" fill style={{ objectFit: "cover" }} sizes="100vw" />
+          <Image src="/blog/blog8.webp" alt="Tari Kecak" fill style={{ objectFit: "cover" }} sizes="100vw" />
         </div>
       </div>
       <div className="article-body">

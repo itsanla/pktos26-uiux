@@ -15,7 +15,7 @@ export default function Blog3() {
           <h1 className="article-title">Jejak Langkah Dang Hyang Nirartha</h1>
         </div>
         <div className="article-hero">
-          <Image src="/blog/placeholder.webp" alt="Dang Hyang Nirartha" fill style={{ objectFit: "cover" }} sizes="100vw" />
+          <Image src="/blog/blog3.webp" alt="Dang Hyang Nirartha" fill style={{ objectFit: "cover" }} sizes="100vw" />
         </div>
       </div>
       <div className="article-body">

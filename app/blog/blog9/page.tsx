@@ -15,7 +15,7 @@ export default function Blog9() {
           <h1 className="article-title">Pariwisata di Era Digital</h1>
         </div>
         <div className="article-hero">
-          <Image src="/blog/placeholder.webp" alt="Pariwisata Digital" fill style={{ objectFit: "cover" }} sizes="100vw" />
+          <Image src="/blog/blog9.webp" alt="Pariwisata Digital" fill style={{ objectFit: "cover" }} sizes="100vw" />
         </div>
       </div>
       <div className="article-body">

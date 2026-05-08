@@ -15,7 +15,7 @@ export default function Blog6() {
           <h1 className="article-title">Keunikan Arsitektur Karang Suci</h1>
         </div>
         <div className="article-hero">
-          <Image src="/blog/placeholder.webp" alt="Arsitektur Tanah Lot" fill style={{ objectFit: "cover" }} sizes="100vw" />
+          <Image src="/blog/blog6.webp" alt="Arsitektur Tanah Lot" fill style={{ objectFit: "cover" }} sizes="100vw" />
         </div>
       </div>
       <div className="article-body">

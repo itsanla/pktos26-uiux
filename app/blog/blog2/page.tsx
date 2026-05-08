@@ -15,7 +15,7 @@ export default function Blog2() {
           <h1 className="article-title">Makna Tradisi Pujawali</h1>
         </div>
         <div className="article-hero">
-          <Image src="/blog/placeholder.webp" alt="Tradisi Pujawali" fill style={{ objectFit: "cover" }} sizes="100vw" />
+          <Image src="/blog/blog2.webp" alt="Tradisi Pujawali" fill style={{ objectFit: "cover" }} sizes="100vw" />
         </div>
       </div>
       <div className="article-body">
