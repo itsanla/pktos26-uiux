@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import Image from "next/image";
 
 const BALI_OFFSET_MS = 8 * 60 * 60 * 1000;
 const SUNSET_H = 17;
@@ -21,22 +22,25 @@ function nextSunsetMs() {
 
 export default function TLHero() {
   const bgRef = useRef<HTMLDivElement>(null);
-  const silRef = useRef<HTMLDivElement>(null);
+  const contentWrapperRef = useRef<HTMLDivElement>(null);
   const [cd, setCd] = useState({ h: "00", m: "00", s: "00" });
   const [localTime, setLocalTime] = useState("—");
 
+  // Parallax — both layers scroll at different depths
   useEffect(() => {
     const onScroll = () => {
       const sc = window.scrollY;
       if (bgRef.current)
         bgRef.current.style.transform = `translate3d(0, ${sc * 0.35}px, 0) scale(1.05)`;
-      if (silRef.current)
-        silRef.current.style.transform = `translateX(-50%) translate3d(0, ${sc * 0.18}px, 0)`;
+      if (contentWrapperRef.current)
+        contentWrapperRef.current.style.transform = `translate3d(0, ${sc * 0.20}px, 0) scale(1.05)`;
     };
     window.addEventListener("scroll", onScroll, { passive: true });
+    onScroll();
     return () => window.removeEventListener("scroll", onScroll);
   }, []);
 
+  // Live countdown to Bali sunset
   useEffect(() => {
     const tick = () => {
       const now = Date.now();
@@ -53,33 +57,52 @@ export default function TLHero() {
 
   return (
     <header className="hero" id="top" data-variant="default">
-      <div className="hero-bg" ref={bgRef} />
-      <div className="hero-silhouette" ref={silRef}>
-        <svg viewBox="0 0 1400 600" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
-          <defs>
-            <linearGradient id="rockGrad" x1="0" y1="0" x2="0" y2="1">
-              <stop offset="0%" stopColor="#1a0f0a" stopOpacity="1" />
-              <stop offset="100%" stopColor="#0a0604" stopOpacity="1" />
-            </linearGradient>
-          </defs>
-          <path d="M0,600 L0,520 L200,510 L420,500 L600,495 L820,500 L1100,512 L1400,520 L1400,600 Z"
-            fill="#3a1809" opacity=".7" />
-          <path d="M520,520 L540,470 L560,440 L580,420 L600,415
-               L605,395 L612,395 L612,380 L630,380 L630,395
-               L640,395 L640,375 L655,375 L655,395 L662,395 L662,360
-               L678,360 L678,395 L685,395 L685,395
-               L700,395 L705,420 L730,425 L760,430 L790,440 L820,460
-               L850,490 L880,510 L900,520 Z"
-            fill="url(#rockGrad)" />
-          <path d="M950,530 L970,500 L995,485 L1020,490 L1045,500 L1070,520 L1090,535 Z"
-            fill="#1a0f0a" opacity=".95" />
-          <path d="M0,530 L80,510 L160,505 L240,510 L320,520 L380,525 L0,540 Z"
-            fill="#1a0f0a" opacity=".75" />
-        </svg>
-      </div>
-      <div className="hero-vignette" />
-      <div className="hero-grain" />
 
+      {/* Layer 1: background placeholder — parallax */}
+      <div className="hero-bg" ref={bgRef}>
+        <Image
+          src="/hero-placeholder.webp"
+          alt=""
+          fill
+          priority
+          sizes="120vw"
+          style={{ objectFit: "cover", objectPosition: "center center" }}
+        />
+      </div>
+
+      {/* Layer 2: video */}
+      <div style={{ position: "absolute", inset: 0, zIndex: 2 }}>
+        <video
+          autoPlay
+          muted
+          loop
+          playsInline
+          style={{ width: "100%", height: "100%", objectFit: "cover" }}
+        >
+          <source src="/hero-video.mp4" type="video/mp4" />
+        </video>
+      </div>
+
+      {/* Layer 3: content image — slides up from bottom, parallax */}
+      <div className="hero-content-wrapper" ref={contentWrapperRef}>
+        <div className="hero-content-layer">
+          <Image
+            src="/hero-content.webp"
+            alt="Pura Tanah Lot"
+            fill
+            priority
+            sizes="120vw"
+            style={{ objectFit: "cover", objectPosition: "center bottom" }}
+          />
+        </div>
+      </div>
+
+      {/* Dark vignette overlay */}
+      <div className="hero-vignette" style={{ zIndex: 3 }} />
+      {/* Film-grain texture */}
+      <div className="hero-grain" style={{ zIndex: 4 }} />
+
+      {/* Content */}
       <div className="hero-inner">
         <div className="hero-eyebrow">
           <span className="dot" />

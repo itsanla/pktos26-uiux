@@ -7,9 +7,38 @@ export default function TLStory() {
             <div className="sec-eyebrow">
               <span className="num">01</span> The Story <span className="ln" />
             </div>
-            <h2 className="about-title">
-              A temple<br />balanced on the <em>tide.</em>
-            </h2>
+            <div style={{ position: "relative", paddingTop: 80, paddingBottom: 80 }}>
+
+              {/* kanan atas — geser ke bawah, overlap judul */}
+              <video
+                autoPlay muted loop playsInline
+                style={{
+                  position: "absolute", top: 0, right: 0,
+                  width: 200, borderRadius: 2, display: "block",
+                  zIndex: 2,
+                }}
+              >
+                <source src="/assets.mp4" type="video/mp4" />
+              </video>
+
+              {/* judul */}
+              <h2 className="about-title" style={{ position: "relative", zIndex: 1 }}>
+                A temple<br />balanced on the <em>tide.</em>
+              </h2>
+
+              {/* kiri bawah — geser ke atas, overlap judul */}
+              <video
+                autoPlay muted loop playsInline
+                style={{
+                  position: "absolute", bottom: -30, left: 0,
+                  width: 200, borderRadius: 2, display: "block",
+                  zIndex: 2,
+                }}
+              >
+                <source src="/assets.mp4" type="video/mp4" />
+              </video>
+
+            </div>
           </div>
 
           <div className="reveal drop">
